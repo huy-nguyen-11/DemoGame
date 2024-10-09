@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
   [SerializeField] private List<Mole> moles;
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private GameObject gameUI;
   [SerializeField] private GameObject bombText;
   [SerializeField] private TMPro.TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI textCongratulate;
     [SerializeField] private List<Image> listStars;
     [SerializeField] private Sprite onStar, offStar;
     [SerializeField] private GameObject camera;
@@ -51,6 +53,8 @@ public class GameManager : MonoBehaviour {
         {
             item.sprite = onStar;
         }
+
+        textCongratulate.transform.localScale = Vector3.zero;
   }
 
   public void GameOver() {
@@ -107,10 +111,37 @@ public class GameManager : MonoBehaviour {
     // Add and update score.
     score += 10;
     scoreText.text = $"{score}";
+
+        if(score % 100 == 0)
+        {
+            int rate = Random.Range(1, 3);
+            switch (rate)
+            {
+                case 1:
+                    textCongratulate.text = "EXCELLENT!";
+                    break;
+                case 2:
+                    textCongratulate.text = "WELL DONE!";
+                    break;
+                case 3:
+                    textCongratulate.text = "GODD JOB!";
+                    break;
+            }
+            AudioManager.instance.PlaySFX("welldone");
+            textCongratulate.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                DOVirtual.DelayedCall(1, () =>
+                {
+                    textCongratulate.transform.localScale = Vector3.zero;
+                });
+            });
+        }
   }
 
     public void VibrateBomb()
     {
         camera.transform.DOShakePosition(0.3f, 0.2f, 40, 90, false, true);
     }
+
+    
 }
