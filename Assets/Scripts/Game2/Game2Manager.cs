@@ -62,7 +62,7 @@ public class Game2Manager : MonoBehaviour
         {
             Debug.Log("victory!");
             yield return new WaitForSeconds(1f);
-            AudioManager.instance.PlaySFX("win");
+            AudioManager.instance.PlaySFX("yeah");
             panelVictory.SetActive(true);
             yield return new WaitForSeconds(4f);
             SceneManager.LoadScene("Game2");
