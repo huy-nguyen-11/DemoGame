@@ -12,6 +12,7 @@ public class Game2Manager : MonoBehaviour
     public List<string> listVoice;
     public GameObject itemSelect;
     public GameObject panelReady , panelVictory;
+    public bool isDragObject = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +20,11 @@ public class Game2Manager : MonoBehaviour
         panelReady.SetActive(true);
         panelVictory.SetActive(false);
         itemSelect.transform.localScale = Vector3.zero;
-        foreach(GameObject go in listFurnitures)
-        {
-            go.GetComponent<Button>().enabled = false;
-        }
+        //foreach(GameObject go in listFurnitures)
+        //{
+        //    go.GetComponent<Button>().enabled = false;
+        //}
+        isDragObject = false;
     }
 
     public void PlayGame()
@@ -52,7 +54,9 @@ public class Game2Manager : MonoBehaviour
             itemSelect.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
             {
                 AudioManager.instance.PlaySFX($"{listVoice[index]}");
-                listFurnitures[index].GetComponent<Button>().enabled = true;
+                isDragObject = true;
+                //listFurnitures[index].GetComponent<Button>().enabled = true;
+                listFurnitures[index].GetComponent<Furniture>().isSelectDrag = true;
                 listFurnitures.RemoveAt(index);
                 listSprite.RemoveAt(index);
                 listVoice.RemoveAt(index);
