@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game3Manager : MonoBehaviour
 {
@@ -14,8 +15,15 @@ public class Game3Manager : MonoBehaviour
     public GameObject panelReady, panelVictory;
     public int indexSelected;
 
+    private List<Sprite> originalListFruits;
+    private List<string> originalListAudioFruits;
+
     private void Start()
     {
+        //copy list
+        originalListFruits = new List<Sprite>(listFruits);
+        originalListAudioFruits = new List<string>(listAudioFruits);
+
         if (listObjects.Count != listPositions.Count || listObjects.Count != 9)
         {
             return;
@@ -41,7 +49,6 @@ public class Game3Manager : MonoBehaviour
     {
         panelReady.SetActive(false);
         ShuffleObjects();
-
         StartCoroutine(SetPosObject());
     }
 
@@ -116,8 +123,28 @@ public class Game3Manager : MonoBehaviour
             Debug.Log("win!");
             panelVictory.SetActive(true);
             AudioManager.instance.PlaySFX("yeah");
-
+            DOVirtual.DelayedCall(2, Reset);
         }
 
+    }
+
+    private void Reset()
+    {
+        listFruits = new List<Sprite>(originalListFruits);
+        listAudioFruits = new List<string>(originalListAudioFruits);
+
+ 
+        foreach (Transform go in listObjects)
+        {
+            go.localScale = Vector3.zero;
+            go.GetComponent<Button>().enabled = false;
+            go.transform.rotation = Quaternion.identity;
+        }
+
+        fruit.transform.localScale = Vector3.zero;
+        panelVictory.SetActive(false);
+
+        ShuffleObjects();
+        StartCoroutine(SetPosObject());
     }
 }

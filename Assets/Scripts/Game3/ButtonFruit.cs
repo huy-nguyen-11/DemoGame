@@ -45,7 +45,7 @@ public class ButtonFruit : MonoBehaviour
         float randomRotation = Random.Range(-40f, 40f);
         transform.DORotate(new Vector3(0, 0, randomRotation), 1f, RotateMode.FastBeyond360);
 
-        float count = Random.Range(-1f, 1f);
+        float count = Random.Range(-0.7f, 1f);
         Vector3 targetPosition = new Vector3(targetPos.position.x + count, targetPos.position.y, 0);
 
         Vector3 peakPoint = new Vector3(transform.position.x - 2 , transform.position.y , 0); // Vị trí hiện tại
