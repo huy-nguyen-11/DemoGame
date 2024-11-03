@@ -7,7 +7,7 @@ using DG.Tweening;
 public class ButtonFruit : MonoBehaviour
 {
     public string nameFruit;
-    public Transform targetPos;
+    public Vector3 targetPos;
     public Game3Manager game3Manager;
     Vector3 _startPos;
     public GameObject effect;
@@ -17,6 +17,7 @@ public class ButtonFruit : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(Moving);
         _startPos = transform.position;
+        //Debug.Log(name + transform.position);
     }
 
     void Moving()
@@ -45,10 +46,10 @@ public class ButtonFruit : MonoBehaviour
         float randomRotation = Random.Range(-40f, 40f);
         transform.DORotate(new Vector3(0, 0, randomRotation), 1f, RotateMode.FastBeyond360);
 
-        float count = Random.Range(-0.7f, 1f);
-        Vector3 targetPosition = new Vector3(targetPos.position.x + count, targetPos.position.y, 0);
+        float count = Random.Range(-1f, 1.3f);
+        Vector3 targetPosition = new Vector3(targetPos.x /*+ count*/, targetPos.y , 0);
 
-        Vector3 peakPoint = new Vector3(transform.position.x - 2 , transform.position.y , 0); // Vị trí hiện tại
+        Vector3 peakPoint = new Vector3(transform.position.x - 2 , transform.position.y , 0); 
         peakPoint.y += 2f;
 
         Vector3[] path = { transform.position, peakPoint, targetPosition };
@@ -59,7 +60,6 @@ public class ButtonFruit : MonoBehaviour
                      GetComponent<Button>().enabled = false;
                      game3Manager.listFruits.RemoveAt(game3Manager.indexSelected);
                      game3Manager.listAudioFruits.RemoveAt(game3Manager.indexSelected);
-
                      game3Manager.Create();
                  });
 

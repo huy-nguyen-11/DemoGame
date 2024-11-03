@@ -150,7 +150,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64114820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: pineapple
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -3.15, y: -1.94, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &250883312
@@ -471,7 +471,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368078153}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: watermelon
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -3.65, y: -2.23, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &391105822
@@ -1461,7 +1461,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023758886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: apple
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -3.72, y: -1.99, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1027964263
@@ -1625,7 +1625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1079489849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1712,7 +1712,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141704912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: strawberry
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -2.4, y: -2.05, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1174125508
@@ -2101,7 +2101,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315233753}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: banana
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -2.17, y: -2.16, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1338901907
@@ -2590,7 +2590,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604575961}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -2698,7 +2698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: mango
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -2.71, y: -2, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1634718293
@@ -2764,7 +2764,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707641900}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: orange
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -1.97, y: -2.05, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1787020495
@@ -3104,7 +3104,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877775317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -3212,7 +3212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: cherry
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -3.17, y: -1.99, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1942241273
@@ -3242,7 +3242,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942241273}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -3350,7 +3350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameFruit: coconut
-  targetPos: {fileID: 1792309984}
+  targetPos: {x: -1.53, y: -2, z: 0}
   game3Manager: {fileID: 1787020497}
   effect: {fileID: 3515042520240476120, guid: ddb7089c03235f144a0bc07cb65eaa51, type: 3}
 --- !u!1 &1962305843

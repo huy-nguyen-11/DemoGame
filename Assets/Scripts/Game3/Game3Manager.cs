@@ -29,7 +29,7 @@ public class Game3Manager : MonoBehaviour
             return;
         }
 
-        foreach(Transform go in listObjects)
+        foreach (Transform go in listObjects)
         {
             go.localScale = Vector3.zero;
             go.GetComponent<Button>().enabled = false;
