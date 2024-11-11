@@ -14,6 +14,8 @@ public class Game4Manager : MonoBehaviour
     public ListEventDemo listEventDemo1, listEventDemo2, listEventDemo3;
     public GameObject panelVictory;
 
+    bool is12, is23, is13;
+
 
     private void Awake()
     {
@@ -35,6 +37,10 @@ public class Game4Manager : MonoBehaviour
         colorBody = listEventDemo2.BodyColorEvent;
         colorTail = listEventDemo3.TailColorEvent;
         StartCoroutine(CheckVictory());
+
+        is12 = false;
+        is13 = false;
+        is23 = false;
     }
 
 
@@ -61,18 +67,29 @@ public class Game4Manager : MonoBehaviour
 
     private IEnumerator CheckVictory()
     {
-        yield return new WaitForSeconds(0.5f); // Delay for 1 second
+        AudioManager.instance.PlaySFX("pop");
+        yield return new WaitForSeconds(1f); // Delay for 1 second
 
         if (colorHead == colorBody && colorBody == colorTail && colorHead == colorTail)
         {
             Debug.Log("Victory");
+            AudioManager.instance.PlaySFX("yeah");
             panelVictory.SetActive(true);
             yield return new WaitForSeconds(1);
             SceneManager.LoadScene("Game4");
-        }else if (colorHead == colorBody || colorHead == colorTail || colorBody == colorTail)
+        }else if (colorHead == colorBody && !is12)
         {
-
+            is12 = true;
+            AudioManager.instance.PlaySFX("blink");
+        }else if (colorHead == colorTail && !is13)
+        {
+            is13 = true;
+            AudioManager.instance.PlaySFX("blink");
+        }else if (colorBody == colorTail && !is23)
+        {
+            is23 = true;
+            AudioManager.instance.PlaySFX("blink");
         }
-        Debug.Log("checked!");
+            Debug.Log("checked!");
     }
 }

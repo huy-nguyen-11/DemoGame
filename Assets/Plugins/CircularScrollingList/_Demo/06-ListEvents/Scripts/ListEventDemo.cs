@@ -12,8 +12,8 @@ namespace AirFishLab.ScrollingList.Demo
         //private Text _selectedContentText;
         //[SerializeField]
         //private Text _requestedContentText;
-        [SerializeField]
-        private Text _autoUpdatedContentText;
+        //[SerializeField]
+        //private Text _autoUpdatedContentText;
 
         //get vaue color
         public string nameEvent; 
@@ -75,9 +75,9 @@ namespace AirFishLab.ScrollingList.Demo
         public void OnFocusingBoxChanged(
             ListBox prevFocusingBox, ListBox curFocusingBox)
         {
-            _autoUpdatedContentText.text =
-                "(Auto updated)\nFocusing content: "
-                + $"{((IntListBox) curFocusingBox).Content}";
+            //_autoUpdatedContentText.text =
+            //    "(Auto updated)\nFocusing content: "
+            //    + $"{((IntListBox) curFocusingBox).Content}";
 
             // Debug.Log(curFocusingBox.GetComponent<Image>().color);
             string hexColor = ColorToHex(curFocusingBox.GetComponent<Image>().color);
