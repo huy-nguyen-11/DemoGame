@@ -10,7 +10,7 @@ public class Body : MonoBehaviour
     [SerializeField] private List<Image> listIcons;
     [SerializeField] private List<Sprite> listSprites;
     [SerializeField] private List<string> listColors;
-
+    public int num;
     void Start()
     {
         AssignRandomIcons();
@@ -23,7 +23,11 @@ public class Body : MonoBehaviour
 
         for (int i = 0; i < shuffledSprites.Count; i++)
         {
-            int randomIndex = Random.Range(0, shuffledSprites.Count);
+            int randomIndex = Random.Range(0, shuffledSprites.Count) + num;
+            if (randomIndex > shuffledSprites.Count - 1)
+            {
+                randomIndex = num;
+            }
             Sprite temp = shuffledSprites[i];
             shuffledSprites[i] = shuffledSprites[randomIndex];
             shuffledSprites[randomIndex] = temp;

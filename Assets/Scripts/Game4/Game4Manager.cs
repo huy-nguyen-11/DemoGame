@@ -76,6 +76,10 @@ public class Game4Manager : MonoBehaviour
             AudioManager.instance.PlaySFX("yeah");
             panelVictory.SetActive(true);
             yield return new WaitForSeconds(1);
+           
+            
+            
+            
             SceneManager.LoadScene("Game4");
         }else if (colorHead == colorBody && !is12)
         {

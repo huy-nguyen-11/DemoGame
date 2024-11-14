@@ -443,6 +443,7 @@ MonoBehaviour:
   - '#BE9F2C'
   - '#AB3360'
   - '#AB6533'
+  num: 1
 --- !u!1 &63901151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,6 +1270,7 @@ MonoBehaviour:
   - '#BE9F2C'
   - '#AB3360'
   - '#AB6533'
+  num: 0
 --- !u!850595691 &196526860
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -4284,6 +4286,7 @@ MonoBehaviour:
   - '#BE9F2C'
   - '#AB3360'
   - '#AB6533'
+  num: 2
 --- !u!1 &747556895
 GameObject:
   m_ObjectHideFlags: 0
